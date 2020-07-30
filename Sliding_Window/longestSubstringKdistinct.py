@@ -25,12 +25,15 @@ def longest_substring_with_k_distinct(str, k):
       freq[str[right]] = 0
     freq[str[right]] += 1
 
+    # keep shrinking the window until we're left k distinct chars
     while len(freq) > k:
-      max_length = max(max_length, len(str[left:right]))
       freq[str[left]] -= 1
       if freq[str[left]] == 0:
         del freq[str[left]]
       left += 1
+    
+    # remember the max length so far
+    max_length = max(max_length, len(str[left:right+1]))
 
   if max_length != float("-inf"):
     return max_length
