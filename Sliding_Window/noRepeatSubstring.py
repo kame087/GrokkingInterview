@@ -19,20 +19,18 @@ def non_repeat_substring(str):
 
   
   """
-  left , right = 0, 0
+  left = 0
   max_length = 0
-  chars = set()
+  chars = {}
 
-  while right < len(str):
+  for right in range(len(str)):
     char = str[right]
     if char in chars:
-      max_length = max(max_length, len(str[left:right]))
-      chars.clear()
-      chars.add(char)
-      left = right
-    else:
-      chars.add(char)
-    right += 1
+      left = max(left, chars[char]+1)
+    
+    chars[char] = right
+    
+    max_length = max(max_length, len(str[left:right+1]))
 
   return max_length
   
