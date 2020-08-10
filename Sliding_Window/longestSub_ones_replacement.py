@@ -5,7 +5,7 @@ def length_of_longest_substring(arr, k):
      letters after replacement k.
 
      The advantage here is that we're only dealing with 1s and 0s. So we don't really need to keep track
-     of a hashmap, we just need to keep track of how many 1s we have.
+     of a hashmap, we just need to keep track of how many 1s we have, which we can use with a simple variable.
 
      max_ones = 0
      max_length = float("-inf")
