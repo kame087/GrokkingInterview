@@ -3,10 +3,11 @@ def find_string_anagrams(str, pattern):
   """
     HIGH LEVEL:
       An anagram is simply a permutation of the pattern. 
-      * One way of tracking this is to create a hashmap that olds the frequencies of each char in the pattern.
+      * One way of tracking this is to create a hashmap that holds the frequencies of each char in the pattern.
 
+      
+      * Keep expanding until you have a window thats larger than the pattern length.
       * Iterate through the string:
-        * Keep expanding until you have a window thats larger than the pattern length.
         * at each iteration, check to see if current char is in the hashmap
           * if it is: deduct the frequency count of that char by 1
           * if that subtraction results to a frequency count of 0, this means you have completed a piece of the pattern
@@ -15,7 +16,7 @@ def find_string_anagrams(str, pattern):
         * if matched == len(freq), then you have an anagram:
           * add left to the result list.
         
-        * if len(window[left:right]) > len(pattern):
+        * if len(window[left:right]) >= len(pattern):
           * you need to shrink the window
           * if char at left pointer is in the hashmap:
             * freq[char] == 0:
@@ -53,7 +54,7 @@ def find_string_anagrams(str, pattern):
     if matched == len(freq):
       result_indices.append(left)
 
-    #check to see if window size is greater than patter, you need to shrink the window
+    #check to see if window size is greater than pattern, you need to shrink the window
     if len(str[left:right+1]) >= len(pattern): 
       char = str[left]
       left += 1
