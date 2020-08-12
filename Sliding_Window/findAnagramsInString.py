@@ -26,7 +26,7 @@ def find_string_anagrams(str, pattern):
 
       return result list
 
-    Time: O(n), n = len(string)
+    Time: O(n+m), n = len(string), m = len(pattern)
     Space: O(m), m = len(pattern)
       
   
