@@ -1,6 +1,7 @@
 def remove_duplicates(arr):
   """
     HIGH LEVEL:
+      This is similar maneuvering to the dutch national flag problem.
       You want to use a two pointer approach: where you iterate the array and the left pointer acts as a bookmark of where the next unique number will land
 
       The first number in the array is never a duplicate, so you can ignore it.
@@ -29,9 +30,7 @@ def remove_duplicates(arr):
     if arr[right] != arr[right-1]:
       arr[left] = arr[right]
       left += 1
-      right += 1
-    else:
-      right += 1
+    right += 1
 
   return left
 
