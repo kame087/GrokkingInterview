@@ -9,7 +9,7 @@ def triplet_with_smaller_sum(arr, target):
         right = n -1
         while left < right:
           if arr[left] + arr[right] < difference:
-            add the distance of right - left to count [since arr[right] >= arr[left], therefore, we can replace arr[right] by any number between left and right to get a sum less than the target sum]
+            add the distance of right - left to count # since arr[right] >= arr[left], therefore, we can replace arr[right] by any number between left and right to get a sum less than the target sum
             increment left
           otherwise:
             decrement right
