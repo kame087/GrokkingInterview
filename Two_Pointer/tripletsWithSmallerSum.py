@@ -1,7 +1,7 @@
 def triplet_with_smaller_sum(arr, target):
   """
     HIGH LEVEL:
-      The optimized solution can be achieve using the two pointer approach.
+      The optimized solution can be achieved using the two pointer approach.
       You first want to sort the array 
       iterate through array p = 0->n-3:
         calculate difference between target - arr[p]
