@@ -1,5 +1,5 @@
 def smallest_subarray_with_given_sum(s, arr):
-  # TODO: Write your code here
+  
   """
   HIGH LEVEL:
     Use the sliding window technique to optimize time complexity.

@@ -1,5 +1,5 @@
 def max_sub_array_of_size_k(k, arr):
-  # TODO: Write your code here
+  
   # BRUTE FORCE SOLUTION:
   # Time: O(n * k), Space: O(1)
   # max_sum = 0
