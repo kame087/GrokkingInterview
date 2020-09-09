@@ -15,6 +15,22 @@ class Node:
 
 
 def find_cycle_start(head):
+  """
+    HIGH LEVEL:
+      There's a famous algorithm that finds the start of the LL cycle, and I can't remember the name of it.
+      But this is it.
+      You use a fast and slow pointer technique, similar to finding a LL cycle.
+      Once the fast and slow pointer meet.
+      Set fast = head
+      while fast and fast.next:
+        check if fast  == slow:
+          return fast
+        move both slow and fast one node at a time.
+
+    Time: O(n)
+    Space: O(1)
+
+  """
   slow, fast = head, head
   while fast and fast.next:
     slow = slow.next
